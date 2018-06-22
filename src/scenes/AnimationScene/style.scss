@@ -1,0 +1,136 @@
+
+.animation-scene {
+  margin-top: 15vh;
+  text-align: center;
+}
+
+.animation-scene__button {
+  margin: 5px 20px;
+  padding: 8px 18px;
+  display: inline-block;
+  -webkit-font-smoothing: antialiased;
+  border: 0;
+  outline: 0;
+  border-radius: 4px;
+  color: #fff;
+  background-color: #9e8aff;
+
+  &--grow {
+    transform: scale(1);
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+
+    &:hover{
+      animation: grow 3s linear 0s infinite;
+      animation-fill-mode: forward;
+    }
+  }
+
+  &--shrink {
+    transform: scale(1);
+
+    &:hover{
+      animation: shrink 3s linear 0s infinite;
+      animation-fill-mode: forward;
+    }
+  }
+
+  &--color {
+    &:hover{
+      animation: color 3s linear 0s infinite;
+      animation-fill-mode: forward;
+    }
+  }
+}
+
+@keyframes grow {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    transform: scale3d(1.4, 1.4, 1.4);
+  }
+
+  to {
+    transform: scale3d(1.2, 1.2, 1.2);
+  }
+}
+
+@-webkit-keyframes shrink {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    transform: scale3d(.8, .8, .8);
+  }
+
+  to {
+    transform: scale3d(.9, .9, .9);
+  }
+}
+
+@keyframes color {
+  from {
+    background-color: #9e8aff;
+  }
+
+  50% {
+    background-color: #2479d1;
+  }
+
+  to {
+    background-color: #9e8aff;
+  }
+}
+
+.animation-scene__round {
+  width: 100%;
+
+  &__shape {
+    width: 50px;
+    height: 50px;
+    border-radius: 100px;
+    background-color: red;
+  }
+
+  &__container {
+    height: 240px;
+    width: 240px;
+    margin: 100px auto 0;
+    animation: roundMotion 6s linear 0s infinite;
+    animation-fill-mode: forward;
+  }
+}
+
+@keyframes roundMotion {
+  from {
+    transform: rotate(-360deg);
+  }
+
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+
+.animation-scene__flash {
+  margin-top: 250px;
+  animation: flash 6s linear 0s infinite;
+  font-size: 50px;
+  color: green;
+}
+
+@keyframes flash {
+  from,
+  50%,
+  to {
+    opacity: 1;
+  }
+
+  25%,
+  75% {
+    opacity: 0;
+  }
+}

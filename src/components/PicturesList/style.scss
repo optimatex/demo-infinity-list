@@ -1,0 +1,9 @@
+.pictures-list {
+  padding: 0;
+  margin: 0;
+
+  &__item {
+    list-style-type: none;
+    min-height: 110px;
+  }
+}

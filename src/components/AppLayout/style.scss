@@ -1,0 +1,12 @@
+.app-layout {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: space-between;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.app-layout__content {
+  margin-left: 2%;
+}

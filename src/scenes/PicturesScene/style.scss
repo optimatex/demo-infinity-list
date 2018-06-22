@@ -1,0 +1,14 @@
+.pictures-scene {
+
+  &__list {
+    display: grid;
+    -ms-display: grid;
+    grid-template-columns: 19.6% 19.6% 19.6% 19.6% 19.6%;
+    -ms-grid-template-columns: 32% 32% 32%;
+    grid-column-gap: .5%;
+  }
+
+  &__item {
+
+  }
+}
